@@ -2,6 +2,7 @@ import fetch from 'isomorphic-fetch';
 import React from 'react';
 import Error from 'next/error';
 import StoryList from '../components/StoryList';
+import Layout from '../components/Layout';
 
 class Index extends React.Component {
 
@@ -31,11 +32,10 @@ class Index extends React.Component {
     }
 
     return (
-      <div>
-        <h1> Hacker next </h1>
+      <Layout title="Hacker Next" description="A Hacker News clone made of nextjs">
         <StoryList stories={hits} />
-      </div>
-    );
+      </Layout>
+    )
   }
 }
 
